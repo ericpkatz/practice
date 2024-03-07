@@ -38,7 +38,7 @@ const init = async()=> {
   await client.connect();
   console.log('connected');
   let SQL = `
-    DROP TABLE notes;
+    DROP TABLE IF EXISTS notes;
     CREATE TABLE notes(
       id SERIAL PRIMARY KEY,
       txt VARCHAR(100),
